@@ -1,95 +1,125 @@
 # 🏥 Hospital Management System (OOP-Based Design)
 
-![Java](https://img.shields.io/badge/Language-Java-orange)  
-![Status](https://img.shields.io/badge/Status-Planning--Stage-yellow)  
-![Level](https://img.shields.io/badge/Level-Intermediate-blue)  
-![Architecture](https://img.shields.io/badge/Architecture-OOP-lightgrey)  
-![Progress](https://img.shields.io/badge/Progress-Unfinished-red)  
+![Java](https://img.shields.io/badge/Language-Java-orange)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Level](https://img.shields.io/badge/Level-Intermediate-blue)
+![Architecture](https://img.shields.io/badge/Architecture-OOP-lightgrey)
+![Progress](https://img.shields.io/badge/Progress-Unfinished-red)
 
 ---
 
 ## 📌 Overview
-A **console-based Hospital Management System** built in Java, designed to demonstrate the **four pillars of Object-Oriented Programming (OOP)**:
+A console-based Hospital Management System built in Java to demonstrate the four pillars of Object-Oriented Programming (OOP):
 
-- Encapsulation  
-- Inheritance  
-- Polymorphism  
-- Abstraction  
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
 
-This project is currently in the **planning phase**, focusing on **system design, structure, and relationships between classes** before full implementation.
+This project is currently in development and focuses on building a clean, structured, and scalable OOP design before adding advanced features.
 
 ---
 
-## 🎯 Project Goal
-To create a simple system that simulates basic hospital operations:
+## 🎯 Project Objective
+The system simulates basic hospital operations in a simplified console environment while applying proper software design principles.
 
-- 👤 Add patients  
-- 👨‍⚕️ Assign doctors  
-- 🧪 Request laboratory tests  
-- 💵 Generate billing  
+Planned features include:
 
-The goal is not complexity, but **clean OOP design and logical structure**.
+- Patient registration and management
+- Doctor assignment
+- Medical service requests (lab tests, consultations)
+- Billing system (inpatient and outpatient computation)
+
+The focus is on logic, structure, and OOP implementation rather than UI design.
 
 ---
 
 ## 🚧 Project Status
-> ⚠️ This project is **not yet implemented**.  
-> It is currently a **blueprint / guide for development**.
+This project is currently in the development phase.
+
+Current progress:
+- Core class structure implemented
+- OOP relationships established
+- Menu system created
+- Basic hospital flow working
+
+Planned improvements:
+- Input validation improvements
+- Error handling enhancements
+- Code refactoring and optimization
+- Expansion of medical services
+- Better system scalability
 
 ---
 
-## 🧱 Planned OOP Structure
+## 🧱 System Design (OOP Structure)
 
-### 🧍 Base Class
-- `Person` (Abstract Class)  
-  - common attributes: name, age, gender  
-  - method: displayInfo()  
+### Base Class
+**Person (Abstract Class)**
+- name
+- age
+- displayInfo()
 
-### 👥 Derived Classes
-- `Patient` extends `Person`  
-  - patientId, medicalHistory  
+### Derived Classes
+**Patient extends Person**
+- doctor assignment
+- room number
+- medical services
+- billing type
 
-- `Doctor` extends `Person`  
-  - specialization, assignedPatients  
-
----
-
-### 🧪 Service Classes
-- `LabTest`  
-  - testName, result, status  
-
-- `Billing`  
-  - consultationFee, testFees, totalAmount  
+**Doctor extends Person**
+- specialization
 
 ---
 
-### 🏥 Core System
-- `HospitalSystem` (Main Class)  
-  - handles:
-    - patient registration  
-    - doctor assignment  
-    - lab requests  
-    - billing  
+### Medical Services
+**MedicalService (Abstract Class)**
+- service name
+- fee
+- performService()
+
+Implemented services:
+- LabTest
+- Consultation
+
+---
+
+### Billing System
+**Billing (Abstract Class)**
+- calculateBill(serviceFee)
+
+Implementations:
+- InPatient (adds room and hospital fees)
+- OutPatient (adds consultation charge)
+
+---
+
+### Core Modules
+- Admission (room management)
+- HospitalMenu (user interaction layer)
+- Patient and Doctor management system
 
 ---
 
 ## 🔄 OOP Concepts Applied
 
 | Concept | Application |
-|--------|------------|
-| Encapsulation | Private fields with getters/setters |
-| Inheritance | `Patient` and `Doctor` inherit from `Person` |
-| Polymorphism | Overriding `displayInfo()` |
-| Abstraction | Abstract class `Person` |
+|--------|-------------|
+| Encapsulation | Private fields with getters and setters |
+| Inheritance | Patient and Doctor extend Person |
+| Polymorphism | Method overriding in services and displayInfo |
+| Abstraction | Abstract classes for Person, Billing, MedicalService |
 
 ---
 
-## 🖥️ Planned Program Flow
+## 🖥️ Program Flow
 ```bash
 ===== HOSPITAL MENU =====
 1. Add Patient
-2. Assign Doctor
-3. Request Lab Test
-4. Generate Bill
-5. Exit
-========================
+2. Add Doctor
+3. View Patients
+4. Assign Doctor / Room
+5. Request Medical Service
+6. Generate Bill
+7. Exit
+=========================

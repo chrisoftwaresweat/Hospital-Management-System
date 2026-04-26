@@ -20,10 +20,11 @@ public class HospitalMenu {
             System.out.println("1. Add Patient");
             System.out.println("2. Add Doctor");
             System.out.println("3. View Patients");
-            System.out.println("4. Assign Doctor / Room");
-            System.out.println("5. Request Medical Service");
-            System.out.println("6. Generate Bill");
-            System.out.println("7. EXIT");
+            System.out.println("4. View Doctors");
+            System.out.println("5. Assign Doctor / Room");
+            System.out.println("6. Request Medical Service");
+            System.out.println("7. Generate Bill");
+            System.out.println("8. EXIT");
             System.out.print("Enter your choice: ");
 
             userChoice = scanner.nextInt();
@@ -42,7 +43,7 @@ public class HospitalMenu {
 
                     System.out.println("Patient Added Successfully!");
                     break;
-
+                    
                 //ADD DOCTOR
                 case 2:
                     System.out.print("Enter Doctor Name: ");
@@ -62,12 +63,20 @@ public class HospitalMenu {
                 case 3:
                     for (int i = 0; i < patientCount; i++) {
                         patients[i].displayInfo();
-                        System.out.println("--------------------");
+                        System.out.println("---------------------------------------------");
+                    }
+                    break;
+
+                //VIEW DOCTORS
+                case 4:
+                    for (int i = 0; i < doctorCount; i++) {
+                        doctors[i].displayInfo();
+                        System.out.println("---------------------------------------------");
                     }
                     break;
 
                 //ASSIGN DOCTOR + ROOM
-                case 4:
+                case 5:
 
                     System.out.println("Select Patient:");
                     for (int i = 0; i < patientCount; i++) {
@@ -109,7 +118,7 @@ public class HospitalMenu {
                     break;
 
                 //MEDICAL SERVICE
-                case 5:
+                case 6:
 
                     System.out.println("Select Patient:");
                     for (int i = 0; i < patientCount; i++) {
@@ -155,7 +164,7 @@ public class HospitalMenu {
                     break;
 
                 //BILLING
-                case 6:
+                case 7:
 
                     System.out.println("Select Patient:");
                     for (int i = 0; i < patientCount; i++) {
@@ -194,7 +203,7 @@ public class HospitalMenu {
                     System.out.println("Final Bill: " + patients[billIndex].getFinalBill());
                     break;
 
-                case 7:
+                case 8:
                     System.out.println("System Closed.");
                     break;
 
@@ -202,7 +211,7 @@ public class HospitalMenu {
                     System.out.println("Invalid Choice!");
             }
 
-        } while (userChoice != 7);
+        } while (userChoice != 8);
 
         scanner.close();
     }

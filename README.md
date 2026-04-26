@@ -11,10 +11,10 @@
 ## 📌 Overview
 A console-based Hospital Management System built in Java to demonstrate the four pillars of Object-Oriented Programming (OOP):
 
-- Encapsulation
-- Inheritance
-- Polymorphism
-- Abstraction
+- Encapsulation  
+- Inheritance  
+- Polymorphism  
+- Abstraction  
 
 This project is currently in development and focuses on building a clean, structured, and scalable OOP design before adding advanced features.
 
@@ -23,12 +23,15 @@ This project is currently in development and focuses on building a clean, struct
 ## 🎯 Project Objective
 The system simulates basic hospital operations in a simplified console environment while applying proper software design principles.
 
-Planned features include:
+Current and planned features include:
 
-- Patient registration and management
-- Doctor assignment
-- Medical service requests (lab tests, consultations)
-- Billing system (inpatient and outpatient computation)
+- Patient registration and management  
+- Doctor registration and management  
+- Viewing patient records  
+- Viewing doctor records *(new feature)*  
+- Doctor and room assignment  
+- Medical service requests (lab tests, consultations)  
+- Billing system (inpatient and outpatient computation)  
 
 The focus is on logic, structure, and OOP implementation rather than UI design.
 
@@ -37,18 +40,19 @@ The focus is on logic, structure, and OOP implementation rather than UI design.
 ## 🚧 Project Status
 This project is currently in the development phase.
 
-Current progress:
-- Core class structure implemented
-- OOP relationships established
-- Menu system created
-- Basic hospital flow working
+### Current progress:
+- Core class structure implemented  
+- OOP relationships established  
+- Menu system created  
+- Basic hospital flow working  
+- Patient and doctor viewing implemented  
 
-Planned improvements:
-- Input validation improvements
-- Error handling enhancements
-- Code refactoring and optimization
-- Expansion of medical services
-- Better system scalability
+### Planned improvements:
+- Input validation improvements  
+- Error handling enhancements  
+- Code refactoring and optimization  
+- Expansion of medical services  
+- Better system scalability  
 
 ---
 
@@ -56,48 +60,50 @@ Planned improvements:
 
 ### Base Class
 **Person (Abstract Class)**
-- name
-- age
-- displayInfo()
+- name  
+- age  
+- displayInfo()  
+
+---
 
 ### Derived Classes
 **Patient extends Person**
-- doctor assignment
-- room number
-- medical services
-- billing type
+- doctor assignment  
+- room number  
+- medical services  
+- billing type  
 
 **Doctor extends Person**
-- specialization
+- specialization  
 
 ---
 
 ### Medical Services
 **MedicalService (Abstract Class)**
-- service name
-- fee
-- performService()
+- service name  
+- fee  
+- performService()  
 
 Implemented services:
-- LabTest
-- Consultation
+- LabTest  
+- Consultation  
 
 ---
 
 ### Billing System
 **Billing (Abstract Class)**
-- calculateBill(serviceFee)
+- calculateBill(serviceFee)  
 
 Implementations:
-- InPatient (adds room and hospital fees)
-- OutPatient (adds consultation charge)
+- InPatient (adds room and hospital fees)  
+- OutPatient (adds consultation charge)  
 
 ---
 
 ### Core Modules
-- Admission (room management)
-- HospitalMenu (user interaction layer)
-- Patient and Doctor management system
+- Admission (room management)  
+- HospitalMenu (user interaction layer)  
+- Patient and Doctor management system  
 
 ---
 
@@ -118,8 +124,9 @@ Implementations:
 1. Add Patient
 2. Add Doctor
 3. View Patients
-4. Assign Doctor / Room
-5. Request Medical Service
-6. Generate Bill
-7. Exit
+4. View Doctors
+5. Assign Doctor / Room
+6. Request Medical Service
+7. Generate Bill
+8. Exit
 =========================

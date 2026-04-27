@@ -202,11 +202,13 @@ public class HospitalMenu {
 
                     System.out.println("Final Bill: " + patients[billIndex].getFinalBill());
                     break;
-
+                    
+                //EXIT PROGRAM
                 case 8:
                     System.out.println("System Closed.");
                     break;
 
+                //INVALID INPUT DETECTION    
                 default:
                     System.out.println("Invalid Choice!");
             }
